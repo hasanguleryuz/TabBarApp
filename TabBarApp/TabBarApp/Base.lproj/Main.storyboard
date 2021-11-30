@@ -102,12 +102,34 @@
         <!--Home Page-->
         <scene sceneID="lZh-l6-i5g">
             <objects>
-                <viewController id="LT2-hx-IkA" sceneMemberID="viewController">
+                <viewController id="LT2-hx-IkA" customClass="HomePageViewController" customModule="TabBarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9f1-gI-Fvl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZU-WA-Bt7">
+                                <rect key="frame" x="20" y="118" width="374" height="34"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="Show Detail">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapDetailButton" destination="LT2-hx-IkA" eventType="touchUpInside" id="Tnu-hD-dfW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SGz-rl-O8Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SGz-rl-O8Y" firstAttribute="trailing" secondItem="tZU-WA-Bt7" secondAttribute="trailing" constant="20" id="FUU-Mk-Qmk"/>
+                            <constraint firstItem="tZU-WA-Bt7" firstAttribute="top" secondItem="SGz-rl-O8Y" secondAttribute="top" constant="30" id="NtX-zg-YRt"/>
+                            <constraint firstItem="tZU-WA-Bt7" firstAttribute="leading" secondItem="SGz-rl-O8Y" secondAttribute="leading" constant="20" id="bQi-8f-s8V"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Page" id="goq-QH-0Hp"/>
                 </viewController>
@@ -136,8 +158,14 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
